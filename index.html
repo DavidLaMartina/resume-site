@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David LaMartina - Software Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .name {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+        }
+
+        .contact {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .contact a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        .title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #34495e;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        .summary {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+
+        .job {
+            margin-bottom: 2rem;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .company-role {
+            flex: 1;
+        }
+
+        .company {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+
+        .role {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #3498db;
+        }
+
+        .date-location {
+            text-align: right;
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .achievements {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .achievements li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.2rem;
+            position: relative;
+        }
+
+        .achievements li:before {
+            content: "▸";
+            color: #3498db;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .skill-category {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+
+        .skill-category h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-category p {
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        .education {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .degree {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+
+        .degree h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 0.3rem;
+        }
+
+        .degree p {
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        .highlights {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid #27ae60;
+        }
+
+        .highlights ul {
+            list-style: none;
+            margin: 0;
+        }
+
+        .highlights li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.2rem;
+            position: relative;
+        }
+
+        .highlights li:before {
+            content: "✓";
+            color: #27ae60;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            .name {
+                font-size: 2.5rem;
+            }
+
+            .job-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .date-location {
+                text-align: left;
+                margin-top: 0.3rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1 class="name">David LaMartina</h1>
+        <div class="contact">
+            <a href="mailto:david@davidlamartina.com">david@davidlamartina.com</a> • 
+            <a href="tel:+19135260677">(913) 526-0677</a> • 
+            <a href="https://linkedin.com/in/davidlamartina" target="_blank">LinkedIn</a> • 
+            <a href="resume.pdf" target="_blank" download>Download Resume</a>
+        </div>
+        <div class="title">Software Engineer | L5 @ Amazon | Full-Stack & Cloud-Native Systems</div>
+        <p class="summary">
+            Experienced software engineer with 7+ years delivering scalable, high-impact systems at industry leaders including Amazon and Microsoft. Proven track record in designing cloud-native architectures, building full-stack applications used by millions, and mentoring teams. Strengths in backend microservices (Java, Kotlin, AWS), frontend systems (React, TypeScript), DevOps, and cross-functional collaboration. Highly skilled in both written and verbal communication, with a strong background in technical documentation, stakeholder alignment, and knowledge transfer.
+        </p>
+    </header>
+
+    <section class="section">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Languages</h3>
+                <p>Java, C#, Python, TypeScript / JavaScript, Dart, SQL</p>
+            </div>
+            <div class="skill-category">
+                <h3>Frameworks & Tools</h3>
+                <p>React, Node.js, Flutter, AWS CDK, Docker, Git, GenAI</p>
+            </div>
+            <div class="skill-category">
+                <h3>Cloud Platforms</h3>
+                <p>AWS (EC2, Lambda, S3, DynamoDB, CloudWatch, SQS), Azure</p>
+            </div>
+            <div class="skill-category">
+                <h3>Databases</h3>
+                <p>PostgreSQL, MySQL, SQL Server, DynamoDB, MongoDB</p>
+            </div>
+            <div class="skill-category">
+                <h3>Testing & CI/CD</h3>
+                <p>JUnit, Cypress, Selenium, Jenkins</p>
+            </div>
+            <div class="skill-category">
+                <h3>GIS Tools</h3>
+                <p>ArcGIS Pro, ArcMap, QGIS, PostGIS</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Professional Experience</h2>
+        
+        <div class="job">
+            <div class="job-header">
+                <div class="company-role">
+                    <div class="company">Amazon</div>
+                    <div class="role">Software Development Engineer II (L5)</div>
+                </div>
+                <div class="date-location">
+                    Aug 2022 – Present<br>
+                    Dallas, TX
+                </div>
+            </div>
+            <ul class="achievements">
+                <li>Founding engineer on the BXT-Regulators team, building a cloud-native, microservice-based platform powering benefits administration for 1M+ Amazon employees.</li>
+                <li>Designed and scaled configuration-driven UI and service architecture deployed globally to over 20 countries.</li>
+                <li>Implemented automated testing pipelines to enable CI/CD and reduce manual QA overhead by dozens of hours weekly.</li>
+                <li>Led overhaul of the employee discount service, cutting on-call incidents by 90%.</li>
+                <li>Mentored junior developers and interns in system design, testing, and on-call excellence.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div class="company-role">
+                    <div class="company">Microsoft</div>
+                    <div class="role">Software Engineer (Contract)</div>
+                </div>
+                <div class="date-location">
+                    Mar 2022 – Jul 2022<br>
+                    Remote
+                </div>
+            </div>
+            <ul class="achievements">
+                <li>Developed internal microservices and tooling for employee training administration across Microsoft.</li>
+                <li>Improved admin workflows, reducing time-to-completion for training-related tasks by 50%.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div class="company-role">
+                    <div class="company">Schneider Electric</div>
+                    <div class="role">Software Engineer I</div>
+                </div>
+                <div class="date-location">
+                    Feb 2021 – Mar 2022<br>
+                    Remote
+                </div>
+            </div>
+            <ul class="achievements">
+                <li>Built and customized GIS-based solutions for electric/gas utilities using C#, Python, and ArcGIS SDKs.</li>
+                <li>Developed integrations between Schneider and customer work management systems to enable real-time asset tracking.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div class="company-role">
+                    <div class="company">New Century Software</div>
+                    <div class="role">Software Engineer I</div>
+                </div>
+                <div class="date-location">
+                    Apr 2019 – Jan 2021<br>
+                    Remote
+                </div>
+            </div>
+            <ul class="achievements">
+                <li>Ported pipeline mapping tools from ArcMap to ArcGIS Pro using C#, Python, and custom SDKs.</li>
+                <li>Reduced data output times 100x by introducing C++ FileGDB optimizations.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div class="company-role">
+                    <div class="company">CACI International</div>
+                    <div class="role">GIS Software Developer</div>
+                </div>
+                <div class="date-location">
+                    Aug 2018 – Jan 2019<br>
+                    Remote
+                </div>
+            </div>
+            <ul class="achievements">
+                <li>Built automation tools for geospatial data extraction and validation used in defense/intelligence applications.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div class="company-role">
+                    <div class="company">Freelance Copywriter</div>
+                    <div class="role">B2B Tech & SaaS Writer</div>
+                </div>
+                <div class="date-location">
+                    2012 – 2018
+                </div>
+            </div>
+            <ul class="achievements">
+                <li>Created technical marketing content (white papers, case studies, blog posts) for Microsoft, EML Payments, and ThinkAdvisor.</li>
+                <li>Developed content strategies and led client relationships across tech and finance verticals.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Education</h2>
+        <div class="education">
+            <div class="degree">
+                <h3>Oregon State University</h3>
+                <p>B.S., Computer Science</p>
+            </div>
+            <div class="degree">
+                <h3>Washington University in St. Louis</h3>
+                <p>B.A., Humanities</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Key Highlights</h2>
+        <div class="highlights">
+            <ul>
+                <li>Architected greenfield Amazon microservices from scratch using Java, Kotlin, AWS CDK, and Terraform.</li>
+                <li>Shipped production-grade full-stack applications with React, Node, and Flutter.</li>
+                <li>Led deployments and rollouts for services used by over 1 million users.</li>
+                <li>Deep background in regulated, enterprise-grade software: utilities, finance, and government.</li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>
